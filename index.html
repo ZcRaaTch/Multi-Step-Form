@@ -12,25 +12,29 @@
 </head>
 <body>
   <div class="sidebar">
-    <button value="1">1</button>
-    <button value="2">2</button>
-    <button value="3">3</button>
-    <button value="4">4</button>
-    <div class="hidden">Step 1
-    Your info
-
-    Step 2
-    Select plan
-
-    Step 3
-    Add-ons
-
-    Step 4
-    Summary</div>
-  
+    <div class="step-number one">
+      <button class="step-id" value="1">1</button>
+      <span class="mobile-hidden">Step 1</span>
+      <p class="mobile-hidden">Your info</p>
+    </div>
+    <div class="step-number two">
+      <button class="step-id" value="2">2</button>
+      <span class="mobile-hidden">Step 2</span>
+      <p class="mobile-hidden"> Select plan</p>
+    </div>
+    <div class="step-number three">
+      <button class="step-id" value="3">3</button>
+      <span class="mobile-hidden">Step 3</span>
+      <p class="mobile-hidden">Add-ons</p>
+    </div>
+    <div class="step-number four">
+      <button class="step-id" value="4">4</button>
+      <span class="mobile-hidden">Step 4</span>
+      <p class="mobile-hidden">Summary</p>
+    </div>
   </div>
   <main class="main">
-    <div class="step-one steps">
+    <div class="step-one steps" id="step-1">
       <h1>Personal info</h1>
       Please provide your name, email address, and phone number.
       <form action="submit">
@@ -44,12 +48,12 @@
         e.g. +1 234 567 890
       </form>
       <div class="pg-control">
-        <button class="next">Next Step</button>
+        <button class="next" value="1">Next Step</button>
       </div>
     
     </div>
 
-    <div class="step-two hidden steps">
+    <div class="step-two hidden steps" id="step-2">
       <h1>Select your plan</h1>
       You have the option of monthly or yearly billing.
 
@@ -65,13 +69,14 @@
       Monthly
       Yearly
       <div class="pg-control">
-        <button class="back">Go Back</button>
-        <button class="next">Next Step</button>
+        <button class="next" value="2">Next Step</button>
+        <button class="back" value="1">Go Back</button>
+        
       </div>
   
     </div>
 
-      <div class="step-three hidden steps">
+      <div class="step-three hidden steps" id="step-3">
       <h1>Pick add-ons</h1>
       Add-ons help enhance your gaming experience.
 
@@ -87,13 +92,14 @@
       Custom theme on your profile
       +$2/mo
       <div class="pg-control">
-        <button class="back">Go Back</button>
-        <button class="next">Next Step</button>
+        <button class="next" value="3">Next Step</button>
+        <button class="back" value="2">Go Back</button>
+        
       </div>
       
     </div>
 
-    <div class="step-four hidden steps">
+    <div class="step-four hidden steps" id="step-4">
       <h1>Finishing up</h1>
       Double-check everything looks OK before confirming.
 
@@ -102,13 +108,14 @@
       Total (per month/year)
 
       <div class="pg-control">
-        <button class="back">Go Back</button>
         <button class="confirm">Confirm</button>
+        <button class="back" value="3">Go Back</button>
+        
       </div>
     
     </div>
 
-    <div class="step-five hidden steps">
+    <div class="step-five hidden steps" id="step-5">
       <h1> Thank you!</h1>
 
       Thanks for confirming your subscription! We hope you have fun 
@@ -116,6 +123,6 @@
       to email us at support@loremgaming.com.
     </div>
    </main>
-  
+  <script src="./index.js" charset="UTF-8"></script>
 </body>
 </html>

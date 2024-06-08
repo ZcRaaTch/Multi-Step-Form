@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700&display=swap');
 
 :root {
+    --clr-primary:hsl(213, 96%, 18%);
+    --clr-secondary:hsl(243, 100%, 62%);
+
+    /* --clr-font-secondary:hsl(206, 94%, 87%); */
+
     --clr-primary-bg:hsl(0, 0%, 100%);
     --clr-primary-bd-bg:hsl(217, 100%, 97%);
+    --clr-primary-grey:hsl(231, 11%, 63%);
+    --clr-secondary-grey:hsl(229, 24%, 87%);
+    --clr-tertiory-alaba:hsl(231, 100%, 99%);
 
     --fs-primary:16px;
 }
@@ -19,6 +27,7 @@
   padding: 0;
   list-style: none;
   font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
 }
 
 body {
@@ -58,8 +67,11 @@ h6 {
 
 /* Default template */
 .hidden {
-        display: none;
-    }
+  display: none;
+}
+button{
+  cursor: pointer;
+}
 
 .sidebar{
     background-image: url('./assets/images/bg-sidebar-mobile.svg');
@@ -67,6 +79,23 @@ h6 {
 }
 body{
     background-color:var(--clr-primary-bd-bg);
+    height: 100vh;
+}
+.sidebar{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.step-id{
+  background: none;
+  color: var(--clr-primary-bg);
+  border: 1px solid var(--clr-primary-bg);
+  margin: 1rem 0.2rem;
+
+  aspect-ratio: 1 / 1;
+  width: 2rem;
+  border-radius: 50%;
+
 }
 .steps{
     z-index: 1;
@@ -80,11 +109,50 @@ body{
     height: 70px;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 
 }
 .next{
     align-self: flex-end;
+    color: var(--clr-primary-bg);
+    border: none;
+    background-color: var(--clr-primary);
+    padding: 6px 10px;
+    margin: 20px;
+    border-radius: 5px;
+}
+.next:hover{
+  background-color: hsla(213, 79%, 21%, 0.904);
+}
+.back{
+  font-weight: 500;
+  align-self: flex-end;
+  border: none;
+  color: var(--clr-primary-grey);
+  background-color: var(--clr-primary-bg);
+  padding: 6px 10px;
+  margin: 20px;
+}
+.back:hover{
+  color: var(--clr-secondary);
+}
+.confirm{
+  align-self: flex-end;
+    color: var(--clr-primary-bg);
+    border: none;
+    background-color: var(--clr-primary);
+    padding: 6px 10px;
+    margin: 20px;
+    border-radius: 5px;
+}
+.confirm:hover{
+  background-color: hsla(213, 79%, 21%, 0.904);
+}
+@media (max-width:375px){
+  .mobile-hidden{
+    display: none;
+  }
 }
 @media (min-width:376px) {
 
