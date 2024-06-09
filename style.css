@@ -4,7 +4,7 @@
     --clr-primary:hsl(213, 96%, 18%);
     --clr-secondary:hsl(243, 100%, 62%);
 
-    /* --clr-font-secondary:hsl(206, 94%, 87%); */
+    --clr-indicator:hsl(206, 94%, 87%);
 
     --clr-primary-bg:hsl(0, 0%, 100%);
     --clr-primary-bd-bg:hsl(217, 100%, 97%);
@@ -72,16 +72,13 @@ h6 {
 button{
   cursor: pointer;
 }
-
-.sidebar{
-    background-image: url('./assets/images/bg-sidebar-mobile.svg');
-    height: 18.9vh;
-}
 body{
     background-color:var(--clr-primary-bd-bg);
     height: 100vh;
 }
 .sidebar{
+  background-image: url('./assets/images/bg-sidebar-mobile.svg');
+  height: 18.9vh;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -95,7 +92,12 @@ body{
   aspect-ratio: 1 / 1;
   width: 2rem;
   border-radius: 50%;
-
+  font-weight: 700;
+}
+.indicator{
+  background-color: var(--clr-indicator);
+  color: var(--clr-primary);
+  border: none;
 }
 .steps{
     z-index: 1;
