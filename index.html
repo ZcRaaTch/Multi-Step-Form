@@ -36,20 +36,16 @@
   <main class="main">
     <div class="step-one steps" id="step-1">
       <h1>Personal info</h1>
-      Please provide your name, email address, and phone number.
+      <p class="form-intro">Please provide your name, email address, and phone number.</p>
       <form action="submit">
-        Name
-        e.g. Stephen King
+        <label for="username">Name</label>
+        <input id="username" name="fullname" type="text" placeholder="e.g. Stephen King">
+        <label for="email">Email Address</label>
+        <input id="email" name="e-mail" type="email" placeholder="e.g. stephenking@lorem.com">
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone-number" type="number" placeholder="e.g. +1 234 567 890">
 
-        Email Address
-        e.g. stephenking@lorem.com
-
-        Phone Number
-        e.g. +1 234 567 890
       </form>
-      <div class="pg-control">
-        <button class="next" value="1">Next Step</button>
-      </div>
     
     </div>
 
@@ -68,11 +64,7 @@
 
       Monthly
       Yearly
-      <div class="pg-control">
-        <button class="next" value="2">Next Step</button>
-        <button class="back" value="1">Go Back</button>
-        
-      </div>
+
   
     </div>
 
@@ -91,11 +83,6 @@
       Customizable Profile
       Custom theme on your profile
       +$2/mo
-      <div class="pg-control">
-        <button class="next" value="3">Next Step</button>
-        <button class="back" value="2">Go Back</button>
-        
-      </div>
       
     </div>
 
@@ -106,12 +93,6 @@
       <!-- Dynamically add subscription and add-on selections here -->
 
       Total (per month/year)
-
-      <div class="pg-control">
-        <button class="confirm">Confirm</button>
-        <button class="back" value="3">Go Back</button>
-        
-      </div>
     
     </div>
 
@@ -123,6 +104,13 @@
       to email us at support@loremgaming.com.
     </div>
    </main>
+   <footer>
+    <div class="pg-control">
+      <button class="next" >Next Step</button>
+      <button class="confirm hidden" onclick="conf()">Confirm</button>
+      <button class="back hidden" onclick="back()" >Go Back</button>
+    </div>
+   </footer>
   <script src="./index.js" charset="UTF-8"></script>
   <script src="./calculator.js" charset="UTF-8"></script>
 </body>

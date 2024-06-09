@@ -78,16 +78,17 @@ body{
 }
 .sidebar{
   background-image: url('./assets/images/bg-sidebar-mobile.svg');
-  height: 18.9vh;
+  height: 28.9vh;
   display: flex;
   justify-content: center;
   gap: 1rem;
+  z-index: -1;
 }
 .step-id{
   background: none;
   color: var(--clr-primary-bg);
   border: 1px solid var(--clr-primary-bg);
-  margin: 1rem 0.2rem;
+  margin:2rem 0rem;
 
   aspect-ratio: 1 / 1;
   width: 2rem;
@@ -100,8 +101,19 @@ body{
   border: none;
 }
 .steps{
-    z-index: 1;
+    z-index: 10;
     background-color:var(--clr-primary-bg) ;
+    width: 93vw;
+    padding: 1.5rem 1rem 2rem;
+    border-radius: 0.7rem;
+    position: absolute;
+    top: 100px;
+    left: 3.5%;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
 }
 .pg-control{
     position: absolute;
@@ -136,7 +148,7 @@ body{
   padding: 6px 10px;
   margin: 20px;
 }
-.back:hover{
+.back:hover , .back:focus-visible{
   color: var(--clr-secondary);
 }
 .confirm{
