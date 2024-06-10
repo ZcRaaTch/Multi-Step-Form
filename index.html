@@ -38,15 +38,14 @@
       <h1>Personal info</h1>
       <p class="form-intro">Please provide your name, email address, and phone number.</p>
       <form action="submit">
-        <label for="username">Name</label>
-        <input id="username" name="fullname" type="text" placeholder="e.g. Stephen King">
-        <label for="email">Email Address</label>
-        <input id="email" name="e-mail" type="email" placeholder="e.g. stephenking@lorem.com">
-        <label for="phone">Phone Number</label>
-        <input id="phone" name="phone-number" type="number" placeholder="e.g. +1 234 567 890">
+        <label for="username">Name<span class="error hidden error-1">This field is required</span></label>
+        <input id="username" class="text-field" name="fullname" type="text" placeholder="e.g. Stephen King">
+        <label for="email">Email Address<span class="error hidden error-2">This field is required</span></label>
+        <input id="email" class="text-field" name="e-mail" type="email" placeholder="e.g. stephenking@lorem.com">
+        <label for="phone">Phone Number<span class="error hidden error-3">This field is required</span></label>
+        <input id="phone" class="text-field" name="phone-number" type="text" placeholder="e.g. +1 234 567 890">
 
       </form>
-    
     </div>
 
     <div class="step-two hidden steps" id="step-2">
