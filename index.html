@@ -33,10 +33,10 @@
       <p class="mobile-hidden">Summary</p>
     </div>
   </div>
-  <main class="main">
-    <div class="step-one steps" id="step-1">
+  <main class="main"> 
+    <div class="step-one hidden steps" id="step-1">
       <h1>Personal info</h1>
-      <p class="form-intro">Please provide your name, email address, and phone number.</p>
+      <p class="step-intro">Please provide your name, email address, and phone number.</p>
       <form action="submit">
         <label for="username">Name<span class="error hidden error-1">This field is required</span></label>
         <input id="username" class="text-field" name="fullname" type="text" placeholder="e.g. Stephen King">
@@ -48,21 +48,39 @@
       </form>
     </div>
 
-    <div class="step-two hidden steps" id="step-2">
+    <div class="step-two steps" id="step-2">
       <h1>Select your plan</h1>
-      You have the option of monthly or yearly billing.
-
-      Arcade
-      $9/mo
-
-      Advanced
-      $12/mo
-
-      Pro
-      $15/mo
-
-      Monthly
-      Yearly
+      <p class="step-intro">You have the option of monthly or yearly billing.</p>
+      <div class="arcade card" tabindex="1">
+        <img src="./assets/images/icon-arcade.svg" alt="">
+        <div class="plan-info">
+        <h2>Arcade</h2>
+        <p class="rate">$9/mo</p>
+        <span class="free">2 months free</span>
+      </div>
+      </div>
+      <div class="advanced card" tabindex="2">
+        <img src="./assets/images/icon-advanced.svg" alt="">
+        <div class="plan-info">
+        <h2>Advanced</h2>
+        <p class="rate">$12/mo</p>
+        <span class="free">2 months free</span>
+      </div>
+      </div>
+      <div class="pro card" tabindex="3">
+        <img src="./assets/images/icon-pro.svg" alt="">
+        <div class="plan-info">
+        <h2>Pro</h2>
+        <p class="rate">$15/mo</p>
+        <span class="free">2 months free</span>
+      </div>
+      </div>
+      <div class="plan">
+        <span class="monthly plan-type" tabindex="4">Monthly</span>
+        <input type="checkbox" name="planlength" id="toggler">
+        <span class="yearly plan-type" tabindex="5">Yearly</span>
+      </div>
+      
 
   
     </div>

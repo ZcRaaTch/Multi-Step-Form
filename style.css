@@ -29,7 +29,7 @@
   padding: 0;
   list-style: none;
   font-family: "Ubuntu", sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 img,
@@ -74,6 +74,7 @@ body{
     background-color:var(--clr-primary-bd-bg);
     height: 100vh;
 }
+/* styling sidebar */
 .sidebar{
   background-image: url('./assets/images/bg-sidebar-mobile.svg');
   height: 28.9vh;
@@ -98,32 +99,34 @@ body{
   color: var(--clr-primary);
   border: none;
 }
+/* styling main */
 h1{
   color:var(--clr-primary) ;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
 }
 .steps{
     z-index: 1;
     background-color:var(--clr-primary-bg) ;
     width: 93vw;
-    padding: 1.5rem 1.5rem 1rem;
+    padding: 1rem 1.5rem 1rem;
     border-radius: 0.7rem;
     position: absolute;
-    top: 100px;
+    top: 98px;
     left: 3.5%;
 }
 
 /* step one styling */
-.form-intro{
+.step-intro{
   color: var(--clr-primary-grey);
   width: 80%;
-  line-height: 1.3;
-  margin: 5px 0 16px;
+  line-height: 1;
+  margin: 5px 0 10px;
 }
 form{
   display: flex;
   flex-direction: column;
+  margin: 20px 0 5px;
 }
 label{
   color: var(--clr-primary);
@@ -159,13 +162,64 @@ input:focus{
   color: var(--clr-primary-grey);
 }
 
+/* step two styling */
+.step-two{
+  padding: 0.5rem 1rem;
+}
+.card{
+  display: flex;
+  cursor: pointer;
+  gap: 1rem;
+  border: 1px solid var(--clr-secondary-grey);
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 8px;
+}
+.card:hover{
+  border: 1px solid var(--clr-primary);
+}
+.card:focus{
+  border: 1px solid var(--clr-primary);
+  background-color:hsla(228, 100%, 84%, 0.541) ;
+}
+h2{
+  font-size: 1rem;
+}
+.rate{
+  font-size: 14px;
+  color: var(--clr-primary-grey);
+  font-weight: 500;
+  margin-top: 4px;
+}
+.free{
+  font-size: 14px;
+  color: var(--clr-secondary);
+  font-weight: 700;
+}
+.plan{
+  background-color: var(--clr-primary-bd-bg);
+  padding: 6px;
+  border-radius: 5px;
+  color: var(--clr-primary-grey);
+  font-weight: 700;
+  font-size: 16px;
 
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  
+}
+
+
+/* step three styling */
+
+/* syling footer */
 .pg-control{
     position: absolute;
     background-color: var(--clr-primary-bg);
     bottom: 0%;
     width: 100vw;
-    height: 70px;
+    height: 60px;
 
     display: flex;
     flex-direction: row-reverse;
@@ -178,7 +232,7 @@ input:focus{
     border: none;
     background-color: var(--clr-primary);
     padding: 6px 10px;
-    margin: 20px;
+    margin: 15px;
     border-radius: 5px;
 }
 .next:hover{
@@ -202,7 +256,7 @@ input:focus{
     border: none;
     background-color: var(--clr-primary);
     padding: 6px 10px;
-    margin: 20px;
+    margin: 15px;
     border-radius: 5px;
 }
 .confirm:hover{
