@@ -1,133 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <title>Frontend Mentor | Multi-step form</title>
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="step-number one">
+        <button class="step-id indicator" value="1">1</button>
+        <span class="mobile-hidden">Step 1</span>
+        <p class="mobile-hidden">Your info</p>
+      </div>
+      <div class="step-number two">
+        <button class="step-id" value="2">2</button>
+        <span class="mobile-hidden">Step 2</span>
+        <p class="mobile-hidden">Select plan</p>
+      </div>
+      <div class="step-number three">
+        <button class="step-id" value="3">3</button>
+        <span class="mobile-hidden">Step 3</span>
+        <p class="mobile-hidden">Add-ons</p>
+      </div>
+      <div class="step-number four">
+        <button class="step-id" value="4">4</button>
+        <span class="mobile-hidden">Step 4</span>
+        <p class="mobile-hidden">Summary</p>
+      </div>
+    </div>
+    <main class="main">
+      <div class="step-one hidden steps" id="step-1">
+        <h1>Personal info</h1>
+        <p class="step-intro">
+          Please provide your name, email address, and phone number.
+        </p>
+        <form action="submit">
+          <label for="username"
+            >Name<span class="error hidden error-1"
+              >This field is required</span
+            ></label
+          >
+          <input
+            id="username"
+            class="text-field"
+            name="fullname"
+            type="text"
+            placeholder="e.g. Stephen King"
+          />
+          <label for="email"
+            >Email Address<span class="error hidden error-2"
+              >This field is required</span
+            ></label
+          >
+          <input
+            id="email"
+            class="text-field"
+            name="e-mail"
+            type="email"
+            placeholder="e.g. stephenking@lorem.com"
+          />
+          <label for="phone"
+            >Phone Number<span class="error hidden error-3"
+              >This field is required</span
+            ></label
+          >
+          <input
+            id="phone"
+            class="text-field"
+            name="phone-number"
+            type="text"
+            placeholder="e.g. +1 234 567 890"
+          />
+        </form>
+      </div>
 
-</head>
-<body>
-  <div class="sidebar">
-    <div class="step-number one">
-      <button class="step-id indicator" value="1">1</button>
-      <span class="mobile-hidden">Step 1</span>
-      <p class="mobile-hidden">Your info</p>
-    </div>
-    <div class="step-number two">
-      <button class="step-id" value="2">2</button>
-      <span class="mobile-hidden">Step 2</span>
-      <p class="mobile-hidden"> Select plan</p>
-    </div>
-    <div class="step-number three">
-      <button class="step-id" value="3">3</button>
-      <span class="mobile-hidden">Step 3</span>
-      <p class="mobile-hidden">Add-ons</p>
-    </div>
-    <div class="step-number four">
-      <button class="step-id" value="4">4</button>
-      <span class="mobile-hidden">Step 4</span>
-      <p class="mobile-hidden">Summary</p>
-    </div>
-  </div>
-  <main class="main"> 
-    <div class="step-one hidden steps" id="step-1">
-      <h1>Personal info</h1>
-      <p class="step-intro">Please provide your name, email address, and phone number.</p>
-      <form action="submit">
-        <label for="username">Name<span class="error hidden error-1">This field is required</span></label>
-        <input id="username" class="text-field" name="fullname" type="text" placeholder="e.g. Stephen King">
-        <label for="email">Email Address<span class="error hidden error-2">This field is required</span></label>
-        <input id="email" class="text-field" name="e-mail" type="email" placeholder="e.g. stephenking@lorem.com">
-        <label for="phone">Phone Number<span class="error hidden error-3">This field is required</span></label>
-        <input id="phone" class="text-field" name="phone-number" type="text" placeholder="e.g. +1 234 567 890">
-
-      </form>
-    </div>
-
-    <div class="step-two steps" id="step-2">
-      <h1>Select your plan</h1>
-      <p class="step-intro">You have the option of monthly or yearly billing.</p>
-      <div class="arcade card" tabindex="1">
-        <img class="plan-icon" src="./assets/images/icon-arcade.svg" alt="arcade icon">
-        <div class="plan-info">
-        <h2>Arcade</h2>
-        <p class="rate">$9/mo</p>
-        <span class="free">2 months free</span>
+      <div class="step-two hidden steps" id="step-2">
+        <h1>Select your plan</h1>
+        <p class="step-intro">
+          You have the option of monthly or yearly billing.
+        </p>
+        <div class="arcade card" tabindex="1">
+          <img
+            class="plan-icon"
+            src="./assets/images/icon-arcade.svg"
+            alt="arcade icon"
+          />
+          <div class="plan-info">
+            <h2>Arcade</h2>
+            <p class="rate">$<span class="variable-rate">9</span>/mo</p>
+            <span class="free hidden">2 months free</span>
+          </div>
+        </div>
+        <div class="advanced card" tabindex="2">
+          <img
+            class="plan-icon"
+            src="./assets/images/icon-advanced.svg"
+            alt="advanced icon"
+          />
+          <div class="plan-info">
+            <h2>Advanced</h2>
+            <p class="rate">$<span class="variable-rate">12</span>/mo</p>
+            <span class="free hidden">2 months free</span>
+          </div>
+        </div>
+        <div class="pro card" tabindex="3">
+          <img
+            class="plan-icon"
+            src="./assets/images/icon-pro.svg"
+            alt="pro icon"
+          />
+          <div class="plan-info">
+            <h2>Pro</h2>
+            <p class="rate">$<span class="variable-rate">15</span>/mo</p>
+            <span class="free hidden">2 months free</span>
+          </div>
+        </div>
+        <div class="plan">
+          <span class="monthly plan-type" tabindex="4">Monthly</span>
+          <input type="checkbox" name="planlength" id="check" />
+          <label for="check" class="month year" id="checker"></label>
+          <span class="yearly plan-type" tabindex="5">Yearly</span>
+        </div>
       </div>
-      </div>
-      <div class="advanced card" tabindex="2">
-        <img class="plan-icon" src="./assets/images/icon-advanced.svg" alt="advanced icon">
-        <div class="plan-info">
-        <h2>Advanced</h2>
-        <p class="rate">$12/mo</p>
-        <span class="free">2 months free</span>
-      </div>
-      </div>
-      <div class="pro card" tabindex="3">
-        <img class="plan-icon" src="./assets/images/icon-pro.svg" alt="pro icon">
-        <div class="plan-info">
-        <h2>Pro</h2>
-        <p class="rate">$15/mo</p>
-        <span class="free">2 months free</span>
-      </div>
-      </div>
-      <div class="plan">
-        <span class="monthly plan-type" tabindex="4">Monthly</span>
-        <input type="checkbox" name="planlength" id="toggler">
-        <span class="yearly plan-type" tabindex="5">Yearly</span>
-      </div>
-      
-
-  
-    </div>
 
       <div class="step-three hidden steps" id="step-3">
-      <h1>Pick add-ons</h1>
-      Add-ons help enhance your gaming experience.
+        <h1>Pick add-ons</h1>
 
-      Online service
-      Access to multiplayer games
-      +$1/mo
+        <p class="step-intro">Add-ons help enhance your gaming experience.</p>
+        <div class="card">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="9"
+            viewBox="0 0 12 9"
+          >
+            <path
+              fill="none"
+              stroke="#FFF"
+              stroke-width="2"
+              d="m1 4 3.433 3.433L10.866 1"
+            />
+          </svg>
+          <div>
+            <h2>Online service</h2>
+            <p class="desc">Access to multiplayer games</p>
+          </div>
+          <span class="addon-rate">+$1/mo</span>
+        </div>
+        <div class="card">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="9"
+            viewBox="0 0 12 9"
+          >
+            <path
+              fill="none"
+              stroke="#FFF"
+              stroke-width="2"
+              d="m1 4 3.433 3.433L10.866 1"
+            />
+          </svg>
+          <div>
+            <h2>Larger storage</h2>
+            <p class="desc">Extra 1TB of cloud save</p>
+          </div>
+          <span class="addon-rate">+$2/mo</span>
+        </div>
+        <div class="card">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="9"
+            viewBox="0 0 12 9"
+          >
+            <path
+              fill="none"
+              stroke="#FFF"
+              stroke-width="2"
+              d="m1 4 3.433 3.433L10.866 1"
+            />
+          </svg>
+          <div>
+            <h2>Customizable Profile</h2>
+            <p class="desc">Custom theme on your profile</p>
+          </div>
+          <span class="addon-rate">+$2/mo</span>
+        </div>
+      </div>
 
-      Larger storage
-      Extra 1TB of cloud save
-      +$2/mo
+      <div class="step-four hidden steps" id="step-4">
+        <h1>Finishing up</h1>
+        <p class="step-intro">
+          Double-check everything looks OK before confirming.
+        </p>
+        <div class="summary">
+          <div class="compulsory">
+            <p></p>
+            <p></p>
+          </div>
+          <hr />
+        </div>
+        <div class="total">
+          <p id="total">Total (per <span id="plan-type">month</span>)</p>
+          <span id="amt"></span>
+        </div>
+      </div>
 
-      Customizable Profile
-      Custom theme on your profile
-      +$2/mo
-      
-    </div>
-
-    <div class="step-four hidden steps" id="step-4">
-      <h1>Finishing up</h1>
-      Double-check everything looks OK before confirming.
-
-      <!-- Dynamically add subscription and add-on selections here -->
-
-      Total (per month/year)
-    
-    </div>
-
-    <div class="step-five hidden steps" id="step-5">
-      <h1> Thank you!</h1>
-
-      Thanks for confirming your subscription! We hope you have fun 
-      using our platform. If you ever need support, please feel free 
-      to email us at support@loremgaming.com.
-    </div>
-   </main>
-   <footer>
-    <div class="pg-control">
-      <button class="next" >Next Step</button>
-      <button class="confirm hidden" onclick="conf()">Confirm</button>
-      <button class="back hidden" onclick="back()" >Go Back</button>
-    </div>
-   </footer>
-  <script src="./index.js" charset="UTF-8"></script>
-</body>
+      <div class="step-five steps" id="step-5">
+        <h1>Thank you!</h1>
+        <img src="./assets/images/icon-thank-you.svg" alt="red tick mark" />
+        <p id="thanks">
+          Thanks for checking my projects! I hope you have seen some potential
+          in me. If you ever need to contact me, please feel free to email me at
+          abhinavawana2444@gmail.com.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div class="pg-control">
+        <button class="next">Next Step</button>
+        <button class="confirm hidden" onclick="conf()">Confirm</button>
+        <button class="back hidden" onclick="back()">Go Back</button>
+      </div>
+    </footer>
+    <script src="./index.js" charset="UTF-8"></script>
+  </body>
 </html>

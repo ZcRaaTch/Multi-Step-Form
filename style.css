@@ -77,6 +77,8 @@ body{
 /* styling sidebar */
 .sidebar{
   background-image: url('./assets/images/bg-sidebar-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 18.9vh;
   display: flex;
   justify-content: center;
@@ -198,8 +200,8 @@ h2{
 }
 .plan{
   background-color: var(--clr-primary-bd-bg);
-  padding: 8px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 10px;
   color: var(--clr-primary-grey);
   font-weight: 700;
   font-size: 16px;
@@ -210,17 +212,39 @@ h2{
   gap: 16px;
   
 }
-.plan-type,#toggler{
+.plan-type,#check{
   cursor: pointer;
-  margin-top:10px;
 }
-
-#toggler{
+#check{
+  display: none;
+}
+#checker{
   background-color: var(--clr-primary);
-  border: none;
+  width: 40px;
+  height: 20px;
+  border-radius: 1rem;
+  position: relative;
 }
-
-
+.month::before{
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  background-color:var(--clr-primary-bg);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.year::before{
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  background-color:var(--clr-primary-bg);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
 /* step three styling */
 
 /* syling footer */
