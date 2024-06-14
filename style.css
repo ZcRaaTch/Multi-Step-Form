@@ -244,7 +244,34 @@ h2 {
   border-radius: 50%;
 }
 /* step three styling */
-
+svg {
+  margin: auto;
+  min-width: 16px;
+  border: 1px solid var(--clr-primary-grey);
+  border-radius: 5px;
+}
+/* step four styling */
+.summary {
+  color: var(--clr-secondary-grey);
+  background-color: var(--clr-primary-bd-bg);
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 0;
+}
+#total {
+  color: var(--clr-primary-grey);
+  font-size: 15px;
+}
+#amt {
+  color: var(--clr-secondary);
+  font-weight: 700;
+  font-size: 16px;
+}
 /* thank you page styling */
 .thanking {
   padding: 4rem 1.5rem;
