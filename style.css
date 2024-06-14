@@ -83,14 +83,12 @@ body {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  z-index: -1;
 }
 .step-id {
   background: none;
   color: var(--clr-primary-bg);
   border: 1px solid var(--clr-primary-bg);
   margin: 2rem 0rem;
-
   aspect-ratio: 1 / 1;
   width: 2rem;
   border-radius: 50%;
@@ -117,7 +115,6 @@ h1 {
   top: 100px;
   left: 3.5%;
 }
-
 /* step one styling */
 .step-intro {
   color: var(--clr-primary-grey);
@@ -128,6 +125,7 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
+  gap: 2px;
   margin: 20px 0 5px;
 }
 label {
@@ -152,8 +150,9 @@ input {
   border: 1px solid var(--clr-secondary-grey);
   border-radius: 5px;
   padding: 0.7rem 1rem;
+  width: 100%;
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   color: var(--clr-primary);
 }
 input:focus {
@@ -163,7 +162,6 @@ input:focus {
 ::placeholder {
   color: var(--clr-primary-grey);
 }
-
 /* step two styling */
 .card {
   display: flex;
@@ -247,6 +245,20 @@ h2 {
 }
 /* step three styling */
 
+/* thank you page styling */
+.thanking {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+#thank-tick {
+  margin: 1rem auto;
+}
+#thanks {
+  color: var(--clr-primary-grey);
+  margin-top: 0.8rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
 /* syling footer */
 .pg-control {
   position: absolute;
