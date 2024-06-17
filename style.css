@@ -226,11 +226,29 @@ h2 {
   border-radius: 50%;
 }
 /* step three styling */
+.step-three > .step-intro {
+  width: 90%;
+}
+.sec-card {
+  position: relative;
+}
 svg {
-  margin: auto;
+  margin: auto 0;
   min-width: 16px;
   border: 1px solid var(--clr-primary-grey);
   border-radius: 5px;
+}
+.desc {
+  font-size: 14px;
+  white-space: nowrap;
+  color: var(--clr-primary-grey);
+}
+.addon-rate {
+  font-size: 13px;
+  color: var(--clr-secondary);
+  position: absolute;
+  top: 1.5rem;
+  right: 0.5rem;
 }
 /* step four styling */
 .summary {
@@ -240,6 +258,31 @@ svg {
   border-radius: 5px;
   font-size: 15px;
 }
+.compulsory {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+}
+li > p {
+  color: var(--clr-primary-grey);
+  margin: 0.5rem 0;
+}
+li > span {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  color: var(--clr-primary);
+}
+#plan-selected,
+#plan-amount {
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+
 .total {
   display: flex;
   justify-content: space-between;
@@ -396,12 +439,10 @@ svg {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     width: 80%;
   }
   .steps {
     background-color: var(--clr-primary-bg);
-    /* min-width: 100%; */
     padding: 1.5rem 1rem 2rem;
     border-radius: 0.7rem;
     margin: 0 1rem;
@@ -466,6 +507,14 @@ svg {
     position: absolute;
     top: 2rem;
     right: 1.5rem;
+  }
+  /* STEP 4 */
+  .step-four {
+    width: 80%;
+  }
+  .summary {
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
   }
   /* FOOTER */
   .pg-control {
