@@ -95,7 +95,7 @@
             You have the option of monthly or yearly billing.
           </p>
           <div class="desk-card">
-            <div class="arcade card" tabindex="1">
+            <div class="arcade card" data-value="9" tabindex="1">
               <img
                 class="plan-icon"
                 src="./assets/images/icon-arcade.svg"
@@ -103,11 +103,11 @@
               />
               <div class="plan-info">
                 <h2>Arcade</h2>
-                <p class="rate">$<span class="variable-rate">9</span>/mo</p>
+                <p class="rate">$<span class="variable-rate">9/mo</span></p>
                 <span class="free hidden">2 months free</span>
               </div>
             </div>
-            <div class="advanced card" tabindex="2">
+            <div class="advanced card" data-value="12" tabindex="2">
               <img
                 class="plan-icon"
                 src="./assets/images/icon-advanced.svg"
@@ -115,11 +115,11 @@
               />
               <div class="plan-info">
                 <h2>Advanced</h2>
-                <p class="rate">$<span class="variable-rate">12</span>/mo</p>
+                <p class="rate">$<span class="variable-rate">12/mo</span></p>
                 <span class="free hidden">2 months free</span>
               </div>
             </div>
-            <div class="pro card" tabindex="3">
+            <div class="pro card" data-value="15" tabindex="3">
               <img
                 class="plan-icon"
                 src="./assets/images/icon-pro.svg"
@@ -127,7 +127,7 @@
               />
               <div class="plan-info">
                 <h2>Pro</h2>
-                <p class="rate">$<span class="variable-rate">15</span>/mo</p>
+                <p class="rate">$<span class="variable-rate">15/mo</span></p>
                 <span class="free hidden">2 months free</span>
               </div>
             </div>
@@ -135,7 +135,7 @@
           <div class="plan">
             <span class="monthly plan-type" tabindex="4">Monthly</span>
             <input type="checkbox" name="planlength" id="check" />
-            <label for="check" class="month year" id="checker"></label>
+            <label for="check" class="month" id="checker"></label>
             <span class="yearly plan-type" tabindex="5">Yearly</span>
           </div>
         </div>

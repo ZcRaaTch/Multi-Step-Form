@@ -157,8 +157,8 @@ input:focus {
 .card:hover {
   border: 1px solid var(--clr-primary);
 }
-.card:focus {
-  border: 1px solid var(--clr-primary);
+.selected-plan {
+  border: 1px solid var(--clr-primary) !important;
   background-color: var(--clr-primary-bd-bg);
 }
 .plan-icon {
