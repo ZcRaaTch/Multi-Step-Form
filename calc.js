@@ -25,9 +25,12 @@ var varRateYearly = ["90/yr", "120/yr", "150/yr"];
 var planValue = 9;
 var addOnValue = 0;
 var elix = 1;
-var pName = "";
+var pName = "Arcade";
 var totalAmount = 0;
-var flag = "";
+var flag = "mo";
+var custIndi = false;
+var lsIndi = false;
+var osIndi = false;
 
 card[0].classList.add("selected-plan");
 // functions
@@ -53,11 +56,51 @@ function displayAddonRate(val) {
 }
 function finalDisplay() {
   totalAmount = planValue + addOnValue;
+  // console.log(typeof planValue);
+  // console.log(addOnValue);
+  // console.log(typeof addOnValue);
   tAmt.innerHTML = `${totalAmount}/${flag}`;
   planSelected.innerHTML = pName;
   document.querySelector(
     "#plan-amount>span"
   ).innerHTML = `${planValue}/${flag}`;
+  if (osIndi || lsIndi || custIndi) {
+    var ul = document.createElement("ul");
+    selectives.appendChild(ul);
+    if (osIndi) {
+      var li = document.createElement("li");
+      var para = document.createElement("p");
+      var sp = document.createElement("span");
+      para.innerHTML = "Online service";
+      sp.innerHTML = `+$${onsvcs.dataset.addon}/${flag}`;
+      li.appendChild(para);
+      li.appendChild(sp);
+      ul.appendChild(li);
+    }
+    if (lsIndi) {
+      var li = document.createElement("li");
+      var para = document.createElement("p");
+      var sp = document.createElement("span");
+      para.innerHTML = "Larger storage";
+      sp.innerHTML = `+$${lrgstrg.dataset.addon}/${flag}`;
+      li.appendChild(para);
+      li.appendChild(sp);
+      ul.appendChild(li);
+    }
+    if (custIndi) {
+      var li = document.createElement("li");
+      var para = document.createElement("p");
+      var sp = document.createElement("span");
+      para.innerHTML = "Customizable profile";
+      sp.innerHTML = `+$${customizable.dataset.addon}/${flag}`;
+      li.appendChild(para);
+      li.appendChild(sp);
+      ul.appendChild(li);
+    }
+  }
+}
+function reverAddon() {
+  selectives.innerHTML = "";
 }
 function planReset() {
   planValue = card[0].dataset.value;
@@ -72,6 +115,7 @@ function planReset() {
     addonSVG[i].classList.remove("svg-bg");
   }
   addOnValue = 0;
+  pName = "Arcade";
 }
 // event listeners
 card.forEach((btn) => {
@@ -122,8 +166,10 @@ onsvcs.addEventListener("click", function () {
   onsvcs.classList.toggle("selected-plan");
   if (onsvcs.classList.contains("selected-plan")) {
     addOnValue += parseInt(onsvcs.dataset.addon);
+    osIndi = true;
   } else {
     addOnValue -= parseInt(onsvcs.dataset.addon);
+    osIndi = false;
   }
 });
 lrgstrg.addEventListener("click", function () {
@@ -131,25 +177,33 @@ lrgstrg.addEventListener("click", function () {
   lrgstrg.classList.toggle("selected-plan");
   if (lrgstrg.classList.contains("selected-plan")) {
     addOnValue += parseInt(lrgstrg.dataset.addon);
+    lsIndi = true;
   } else {
     addOnValue -= parseInt(lrgstrg.dataset.addon);
+    lsIndi = false;
   }
 });
 customizable.addEventListener("click", function () {
   csvg.classList.toggle("svg-bg");
+
   customizable.classList.toggle("selected-plan");
   if (customizable.classList.contains("selected-plan")) {
     addOnValue += parseInt(customizable.dataset.addon);
+    custIndi = true;
   } else {
     addOnValue -= parseInt(customizable.dataset.addon);
+    custIndi = false;
   }
 });
 nxtus.addEventListener("click", function () {
   elix++;
-  if (x == 4) {
+  if (elix == 4) {
     finalDisplay();
   }
 });
 bckus.addEventListener("click", function () {
+  if (elix == 4) {
+    reverAddon();
+  }
   elix--;
 });
