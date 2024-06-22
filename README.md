@@ -32,7 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://zcraatch.github.io/Calculator_F.M./)
+- Solution URL: [Solution](https://github.com/ZcRaaTch/Multi-Step-Form)
+- Site URL: [Live-Site](https://zcraatch.github.io/Multi-Step-Form/)
 
 ## My process
 
