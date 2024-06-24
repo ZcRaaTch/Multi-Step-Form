@@ -59,6 +59,5 @@ The most useful resource which helped me to complete this project was 'Stack Ove
 
 ## Author
 
-- Mail - [@Abhinav](abhinavawana2444@gmail.com)
 - Github - [@ZcRaaTch](https://github.com/ZcRaaTch)
 - Frontend Mentor - [@Abhinav Awana](https://www.frontendmentor.io/profile/ZcRaaTch)
